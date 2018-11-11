@@ -1,0 +1,69 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Shrijana Ghimire</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel ="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+            background: linear-gradient(to left, #ffff00 0%, #ffccff 100%);
+
+           }
+      section {
+
+          background: linear-gradient(to bottom, #ffffcc 0%, #ff0066 100%) !important;
+           }
+       </style>
+  </head>
+
+  <body>
+
+   
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading"><b>Project Detail</b></h1>
+          
+
+          <p class="lead text-muted">{{ job.summary }}</p>
+          <p class="lead text-muted"><a href="{{job.link}}">Learn More!</a></p>
+          	<img src="{{ job.image.url }}" height=300>
+
+          	<p>
+            <a href="{% url 'home' %}" class="btn btn-primary my-2">Go back</a>
+            </p>
+          </p>
+        </div>
+      </section>
+
+      
+
+    </main>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'jquery-3.3.1.min.js' %}"> </script>
+<script src="{% static 'popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
